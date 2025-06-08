@@ -6,6 +6,7 @@ use App\Models\Contact;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,7 @@ Route::post('/edit', function (Illuminate\Http\Request $request) {
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::delete('/contacts/{id}', [AdminController::class, 'destroy'])->name('contacts.delete');
+    Route::get('/admin/export', [AdminController::class, 'export'])->name('admin.export');
 });
 
 //ログアウト処理

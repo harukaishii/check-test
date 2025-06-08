@@ -57,7 +57,7 @@
     flex-shrink: 1;
     min-width: 120px;
     width: 100%;
-  }
+}
 
 
 
@@ -255,7 +255,7 @@ svg.w-5.h-5 {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-         z-index: 999;
+        z-index: 999;
     }
 
 .modal-content-php {
@@ -264,13 +264,13 @@ svg.w-5.h-5 {
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #fff;
-        padding: 30px; /* パディングを調整して余白を確保 */
+        padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         z-index: 1000;
-        width: 90%; /* モーダルの幅を調整 */
-        max-width: 600px; /* 最大幅を設定 */
-        box-sizing: border-box; /* パディングを含めて幅を計算 */
+        width: 90%;
+        max-width: 600px;
+        box-sizing: border-box;
     }
 
     /* 閉じるボタン（右上のX）のスタイル */
@@ -283,58 +283,57 @@ svg.w-5.h-5 {
         color: #333;
         cursor: pointer;
     }
+
     .modal-content-php .close-button:hover {
         color: #888;
     }
 
-    /* テーブルの見出しと内容のスタイル */
+
     .detail-table {
-        width: 100%; /* テーブルの幅を100%に */
-        border-collapse: collapse; /* セルの境界線をなくす */
-        margin-bottom: 20px; /* ボタンとの間に余白 */
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
     }
 
     .detail-table th,
     .detail-table td {
-        padding: 8px 0; /* 上下のパディング */
-        vertical-align: top; /* 上揃え */
+        padding: 8px 0;
+        vertical-align: top;
     }
 
     .detail-table th {
-        text-align: left; /* 左寄せ */
-        width: 150px; /* 見出しの幅を固定または調整 */
-        padding-right: 20px; /* 内容との間に余白 */
-        font-weight: bold; /* 見出しを太字に */
-        color: #555; /* 見出しの色 */
-        white-space: nowrap; /* テキストが改行されないように */
+        text-align: left;
+        width: 150px;
+        padding-right: 20px;
+        font-weight: bold;
+        color: #555;
+        white-space: nowrap;
     }
 
     .detail-table td {
-        text-align: left; /* 内容も左寄せ */
-        word-break: break-all; /* 長い単語でも改行されるように */
+        text-align: left;
+        word-break: break-all;
     }
 
 
-    /* ボタンをまとめるコンテナ */
     .modal-actions {
-        display: flex; /* flexboxを有効にする */
-        justify-content: center; /* 横方向の中央寄せ */
-        align-items: center; /* 縦方向の中央寄せ（もし高さが異なる場合） */
-        gap: 20px; /* ボタン間の余白 */
-        margin-top: 20px; /* テーブルとの間に余白 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
     }
 
-    /* 閉じるボタン（下部）と削除ボタンの共通スタイル */
     .modal-actions .back-button,
     .modal-actions .admin__delete-button {
-        display: inline-block; /* ボタンをインラインブロックに */
-        padding: 8px 20px; /* パディング */
+        display: inline-block;
+        padding: 8px 20px;
         border-radius: 5px;
         text-decoration: none;
         cursor: pointer;
         font-size: 16px;
         transition: background-color 0.3s ease;
-        border: none; /* デフォルトの枠線をなくす */
+        border: none;
     }
 
     .modal-actions .back-button {
@@ -346,15 +345,14 @@ svg.w-5.h-5 {
     }
 
     .modal-actions .admin__delete-button {
-        background-color: #dc3545; /* 赤色 */
+        background-color: #dc3545;
         color: #fff;
     }
     .modal-actions .admin__delete-button:hover {
         background-color: #c82333;
     }
 
-    /* 削除フォームのスタイル（ボタンがフォーム要素の場合） */
     .modal-actions .delete-form {
-        margin: 0; /* デフォルトのマージンをリセット */
+        margin: 0;
         padding: 0;
     }

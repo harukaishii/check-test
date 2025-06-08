@@ -45,9 +45,11 @@
 
         </form>
 
-        <div class="admin__export">
-          <button class="admin__export-button">エクスポート</button>
-        </div>
+<!-- CSV出力ボタン（検索条件付き） -->
+        <form method="GET" action="{{ route('admin.export') }}">
+            <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+            <button class="admin__export-button" type="submit">エクスポート</button>
+        </form>
 
         <div class="admin__results">
           <div class="admin__pagination">

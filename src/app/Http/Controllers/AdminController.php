@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Category;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+
 
 class AdminController extends Controller
 {
@@ -49,5 +51,63 @@ class AdminController extends Controller
 
         return redirect()->route('admin.index')->with('success', '問い合わせが正常に削除されました。');
     }
+
+    public function export(Request $request): StreamedResponse
+{
+    $query = Contact::query();
+
+    $query->nameEmailSearch($request->input('keyword'))
+          ->genderSearch($request->input('gender'))
+          ->categorySearch($request->input('category_id'))
+          ->dateSearchFrom($request->input('date_from'))
+          ->dateSearchTo($request->input('date_to'));
+
+    $contacts = $query->with('category')->get();
+
+    $headers = [
+        'Content-Type' => 'text/csv',
+        'Content-Disposition' => 'attachment; filename="contacts.csv"',
+    ];
+
+    $columns = ['お名前', '性別', 'メールアドレス', 'お問い合わせの種類'];
+
+    return response()->stream(function () use ($contacts, $columns) {
+        $handle = fopen('php://output', 'w');
+
+        // 文字化け防止のためBOMを追加（Excel対応）
+        fprintf($handle, chr(0xEF) . chr(0xBB) . chr(0xBF));
+
+        fputcsv($handle, $columns);
+
+        foreach ($contacts as $contact) {
+            $fullName = $contact->last_name . ' ' . $contact->first_name;
+
+            // genderの値を文字列に変換
+            switch ($contact->gender) {
+                case 1:
+                    $genderText = '男性';
+                    break;
+                case 2:
+                    $genderText = '女性';
+                    break;
+                case 3:
+                    $genderText = 'その他';
+                    break;
+                default:
+                    $genderText = '不明';
+                    break;
+            }
+
+            fputcsv($handle, [
+                $fullName,
+                $genderText,
+                $contact->email,
+                optional($contact->category)->content,
+            ]);
+        }
+        fclose($handle);
+    }, 200, $headers);
+}
+
 
 }
