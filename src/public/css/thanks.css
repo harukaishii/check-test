@@ -1,0 +1,59 @@
+body {
+    /* 背景色などの基本的な設定 */
+    background-color: #f0f0f0;
+    /* 全体の背景色に合わせて調整 */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* ビューポートの高さ全体を使う */
+    display: flex;
+    /* 子要素を中央に配置するためにFlexboxを使用 */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* 疑似要素の基準位置とするため */
+    overflow: hidden;
+
+}
+
+body::before {
+    content: "Thank you";
+    font-family: serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    color: #E0DFDE;/
+    opacity: 0.5;
+    z-index: -1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+
+.thanks__content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    /* 疑似要素の上に表示 */
+}
+
+.thanks__heading h2 {
+    color: #8B7969;
+    margin-bottom: 30px;
+}
+
+.form__button-submit {
+    padding: 10px 30px;
+    width: auto;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #82756A;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: serif;
+}

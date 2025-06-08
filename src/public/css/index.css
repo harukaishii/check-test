@@ -1,0 +1,204 @@
+.header {
+    background: #fff;
+    height: 100px;
+    border: 1px solid #E1DBD699;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__logo {
+    padding: 0;
+    margin: 0;
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: serif;
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #8B7969;
+    font-family: serif;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+}
+
+.form__group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 30px;
+
+}
+
+.form__group-title {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+
+.form__label--item {
+    color: #8B7969;
+}
+
+.form__label--required {
+    margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #ff0000;
+}
+
+.form__group-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group-content--name {
+    flex-direction: row;
+    /* 名前の入力フィールドを横に並べる */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form__input--text__name-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input--text__name input {
+    width: 250px;
+    padding: 10px;
+    background-color: #E1DBD699;
+    color: #8B7969;
+    border: none;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.form__input--tel-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__input--text__tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form__input--text__tel input {
+    padding: 10px;
+    width: 100px;
+    background-color: #E1DBD699;
+    color: #8B7969;
+    border: none;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.form__input--text__tel span {
+    color: #8B7969;
+}
+
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 100%;
+    /* 親の幅に合わせて広がるように変更 */
+    background-color: #E1DBD699;
+    border: none;
+    border-radius: 3px;
+    appearance: none;
+    color: #8B7969;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__input--radio {
+    color: #8B7969;
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.form__input--radio label {
+    margin: 0;
+    padding: 0;
+}
+
+#category {
+    padding: 10px;
+    background-color: #E1DBD699;
+    border: none;
+    border-radius: 3px;
+    color: #8B7969;
+    width: 100%;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form__error--tel {
+    margin-top: 5px;
+    display: flex;
+    gap: 15px;
+}
+
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #82756A;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,360 @@
+.admin__content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.admin__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color:#8B7969;
+    font-family: serif;
+}
+
+.admin__panel {
+    padding: 30px;
+    background-color: #fff;
+
+}
+
+.admin-search__form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.admin-search__form-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 150px;
+    color: #8B7969;
+}
+
+.admin-search__form-item--text {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 200px;
+}
+
+.admin-search__form-item--select {
+    flex-basis: 163px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 120px;
+    justify-content: space-between;
+}
+
+.admin-search__form-item--date {
+    flex-basis: 160px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 120px;
+    width: 100%;
+  }
+
+
+
+.admin-search__form-item--text input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.admin-search__form-item--select select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 7px;
+}
+
+
+.admin-search__form-item--date input[type="date"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.admin-search__buttons {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+}
+
+.admin__button-submit-search {
+    padding: 10px 30px;
+    background-color: #604530;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.admin__button-submit-search:hover {
+    background-color: #4a3525;
+}
+
+.admin__button-submit-reset {
+    padding: 10px 30px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.admin__button-submit-reset:hover {
+    background-color: #e0e0e0;
+}
+
+.admin__export {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.admin__export-button {
+    padding: 8px 20px;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.admin__export-button:hover {
+    background-color: #666;
+}
+
+.admin__results {
+    margin-top: 30px;
+}
+
+.admin__pagination {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.pagination li a {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #666;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.pagination li a.active,
+.pagination li a:hover {
+    background-color: #604530;
+    color: #fff;
+    border-color: #604530;
+}
+
+.admin-table__inner {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table__row {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+    color: #8B7969;
+}
+
+.admin-table__header {
+    background-color: #604530;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    height: 60px;
+}
+
+.admin-table__item  {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    height: 50px;
+}
+
+.detail__button td:last-child {
+    text-align: center;
+    width: 80px;
+}
+
+.detail__button {
+    padding: 5px 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.admin__table-detail-button:hover {
+    background-color: #908070;
+}
+
+
+.admin-search__form-item {
+        min-width: unset;
+        width: 100%;
+}
+
+.admin__table__inner th,
+.admin__table__row td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+svg.w-5.h-5 {
+        width: 30px;
+        height: 30px;
+    }
+
+.modal-overlay {
+        display: none;
+         /* 初期は非表示 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+         z-index: 999;
+    }
+
+.modal-content-php {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px; /* パディングを調整して余白を確保 */
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 90%; /* モーダルの幅を調整 */
+        max-width: 600px; /* 最大幅を設定 */
+        box-sizing: border-box; /* パディングを含めて幅を計算 */
+    }
+
+    /* 閉じるボタン（右上のX）のスタイル */
+    .modal-content-php .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+        cursor: pointer;
+    }
+    .modal-content-php .close-button:hover {
+        color: #888;
+    }
+
+    /* テーブルの見出しと内容のスタイル */
+    .detail-table {
+        width: 100%; /* テーブルの幅を100%に */
+        border-collapse: collapse; /* セルの境界線をなくす */
+        margin-bottom: 20px; /* ボタンとの間に余白 */
+    }
+
+    .detail-table th,
+    .detail-table td {
+        padding: 8px 0; /* 上下のパディング */
+        vertical-align: top; /* 上揃え */
+    }
+
+    .detail-table th {
+        text-align: left; /* 左寄せ */
+        width: 150px; /* 見出しの幅を固定または調整 */
+        padding-right: 20px; /* 内容との間に余白 */
+        font-weight: bold; /* 見出しを太字に */
+        color: #555; /* 見出しの色 */
+        white-space: nowrap; /* テキストが改行されないように */
+    }
+
+    .detail-table td {
+        text-align: left; /* 内容も左寄せ */
+        word-break: break-all; /* 長い単語でも改行されるように */
+    }
+
+
+    /* ボタンをまとめるコンテナ */
+    .modal-actions {
+        display: flex; /* flexboxを有効にする */
+        justify-content: center; /* 横方向の中央寄せ */
+        align-items: center; /* 縦方向の中央寄せ（もし高さが異なる場合） */
+        gap: 20px; /* ボタン間の余白 */
+        margin-top: 20px; /* テーブルとの間に余白 */
+    }
+
+    /* 閉じるボタン（下部）と削除ボタンの共通スタイル */
+    .modal-actions .back-button,
+    .modal-actions .admin__delete-button {
+        display: inline-block; /* ボタンをインラインブロックに */
+        padding: 8px 20px; /* パディング */
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        border: none; /* デフォルトの枠線をなくす */
+    }
+
+    .modal-actions .back-button {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .modal-actions .back-button:hover {
+        background-color: #e0e0e0;
+    }
+
+    .modal-actions .admin__delete-button {
+        background-color: #dc3545; /* 赤色 */
+        color: #fff;
+    }
+    .modal-actions .admin__delete-button:hover {
+        background-color: #c82333;
+    }
+
+    /* 削除フォームのスタイル（ボタンがフォーム要素の場合） */
+    .modal-actions .delete-form {
+        margin: 0; /* デフォルトのマージンをリセット */
+        padding: 0;
+    }
